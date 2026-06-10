@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia dos Namorados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <h1 class="navbar-title">Feliz dia dos namorados! ❤️</h1>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <!-- CRONÔMETRO -->
+        <section class="cronometro-section">
+            <h2 class="cronometro-title">Tempo em que estamos juntos:</h2>
+            <div class="cronometro-display">
+                <div class="time-unit">
+                    <span class="time-value" id="dias">0</span>
+                    <span class="time-label">dias</span>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-unit">
+                    <span class="time-value" id="horas">0</span>
+                    <span class="time-label">horas</span>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-unit">
+                    <span class="time-value" id="minutos">0</span>
+                    <span class="time-label">minutos</span>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-unit">
+                    <span class="time-value" id="segundos">0</span>
+                    <span class="time-label">segundos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE MEMÓRIAS -->
+        <section class="memories-section">
+            <h2 class="memories-title">Aqui estão algumas memórias que escolhi para você reviver na sua mente:</h2>
+            
+            <div class="memories-grid">
+                <!-- Card 1 -->
+                <article class="memory-card" data-parallax="1">
+                    <div class="memory-image-container">
+                        <img src="./assets/images/img1.jpg" alt="Dia da decisão" class="memory-image">
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-subtitle">Dia da decisão</h3>
+                        <p class="memory-text">O dia em que decidimos firmar nosso compromisso de namoro</p>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="memory-card" data-parallax="2">
+                    <div class="memory-image-container">
+                        <img src="./assets/images/img2.jpeg" alt="Primeiro aniversário com você" class="memory-image">
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-subtitle">Primeiro aniversário com você</h3>
+                        <p class="memory-text">Primeiro aniversário seu que passamos juntos, seu 18tão</p>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="memory-card" data-parallax="3">
+                    <div class="memory-image-container">
+                        <img src="./assets/images/img3.jpeg" alt="Culto da mocidade" class="memory-image">
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-subtitle">Culto da mocidade</h3>
+                        <p class="memory-text">Um culto muito especial em que acabamos combinando a roupa sem combinar</p>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="memory-card" data-parallax="4">
+                    <div class="memory-image-container">
+                        <img src="./assets/images/img4.jpeg" alt="Chá de bebê" class="memory-image">
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-subtitle">Chá de bebê</h3>
+                        <p class="memory-text">Você estava excepcionalmente linda e encantadora neste dia, ainda mais com esse vestido.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </header>
+
+    <!-- SEÇÃO DE FORMULÁRIO -->
+    <section class="form-section">
+        <div class="form-container">
+            <h2 class="form-title">Formulário sobre o casal❤️</h2>
+            <form id="casal-form" class="form">
+                <div class="form-group">
+                    <label class="form-label">Quem é mais engraçado?</label>
+                    <div class="form-options">
+                        <label class="form-option">
+                            <input type="radio" name="engraçado" value="Pedro" required>
+                            <span>Pedro</span>
+                        </label>
+                        <label class="form-option">
+                            <input type="radio" name="engraçado" value="Isabelle">
+                            <span>Isabelle</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Quem é mais ciumento?</label>
+                    <div class="form-options">
+                        <label class="form-option">
+                            <input type="radio" name="ciumento" value="Pedro" required>
+                            <span>Pedro</span>
+                        </label>
+                        <label class="form-option">
+                            <input type="radio" name="ciumento" value="Isabelle">
+                            <span>Isabelle</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Quem é mais bravo?</label>
+                    <div class="form-options">
+                        <label class="form-option">
+                            <input type="radio" name="bravo" value="Pedro" required>
+                            <span>Pedro</span>
+                        </label>
+                        <label class="form-option">
+                            <input type="radio" name="bravo" value="Isabelle">
+                            <span>Isabelle</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Quem é mais romântico?</label>
+                    <div class="form-options">
+                        <label class="form-option">
+                            <input type="radio" name="romântico" value="Pedro" required>
+                            <span>Pedro</span>
+                        </label>
+                        <label class="form-option">
+                            <input type="radio" name="romântico" value="Isabelle">
+                            <span>Isabelle</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Quem é mais paciente?</label>
+                    <div class="form-options">
+                        <label class="form-option">
+                            <input type="radio" name="paciente" value="Pedro" required>
+                            <span>Pedro</span>
+                        </label>
+                        <label class="form-option">
+                            <input type="radio" name="paciente" value="Isabelle">
+                            <span>Isabelle</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Quem é mais prático?</label>
+                    <div class="form-options">
+                        <label class="form-option">
+                            <input type="radio" name="prático" value="Pedro" required>
+                            <span>Pedro</span>
+                        </label>
+                        <label class="form-option">
+                            <input type="radio" name="prático" value="Isabelle">
+                            <span>Isabelle</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar resposta</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PRESENTE -->
+    <section class="present-section">
+        <button id="btn-present" class="btn-present">clique aqui para ganhar o presente</button>
+    </section>
+
+    <!-- MODAL DE PERGUNTA FINAL -->
+    <div id="modal-present" class="modal">
+        <div class="modal-content">
+            <h2 class="modal-title">Aceita sair para jantar comigo hoje a noite?</h2>
+            <div class="modal-buttons">
+                <button class="btn-modal btn-sim">Sim</button>
+                <button class="btn-modal btn-nao">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

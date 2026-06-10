@@ -1,0 +1,597 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffcbdb;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    background: linear-gradient(135deg, #ff69b4, #ffb6d9);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-title {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    padding: 60px 20px;
+}
+
+/* ==================== CRONÔMETRO ==================== */
+.cronometro-section {
+    text-align: center;
+    margin-bottom: 80px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cronometro-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.cronometro-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.time-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    min-width: 60px;
+    text-align: center;
+}
+
+.time-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.time-separator {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 5px;
+}
+
+/* ==================== MEMORIES SECTION ==================== */
+.memories-section {
+    margin-top: 80px;
+}
+
+.memories-title {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #ffffff;
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.memories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.memory-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+    animation: cardSlideIn 0.6s ease-out forwards;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.memory-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.memory-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.memory-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.memory-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.memory-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.memory-image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.memory-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.memory-card:hover .memory-image {
+    transform: scale(1.05);
+}
+
+.memory-content {
+    padding: 20px;
+    background: rgba(255, 105, 180, 0.2);
+}
+
+.memory-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.memory-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+/* ==================== FORM SECTION ==================== */
+.form-section {
+    background: linear-gradient(180deg, #ffb6d9, #ffcbdb);
+    padding: 60px 20px;
+    margin-top: 80px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+    animation: slideDown 0.5s ease-out;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.form-options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.form-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #ff1493;
+}
+
+.form-option:hover {
+    transform: translateX(5px);
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #ff1493, #ff69b4);
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* ==================== PRESENT SECTION ==================== */
+.present-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    min-height: 400px;
+}
+
+.btn-present {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #dc143c, #ff1493);
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(220, 20, 60, 0.3);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.btn-present:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 40px rgba(220, 20, 60, 0.5);
+}
+
+.btn-present:active {
+    transform: scale(0.95);
+}
+
+/* ==================== MODAL ==================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #ff69b4, #ffb6d9);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    animation: slideUp 0.4s ease-out;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-modal {
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.btn-sim {
+    background: #4CAF50;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-sim:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.btn-nao {
+    background: #f44336;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3);
+}
+
+.btn-nao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
+}
+
+.btn-modal:active {
+    transform: translateY(0);
+}
+
+/* ==================== PARALLAX EFFECT ==================== */
+.parallax-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-image img {
+    will-change: transform;
+    transition: transform 0.3s ease-out;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+    .navbar-title {
+        font-size: 22px;
+    }
+
+    .cronometro-title {
+        font-size: 20px;
+    }
+
+    .time-value {
+        font-size: 28px;
+    }
+
+    .time-separator {
+        font-size: 22px;
+    }
+
+    .memories-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .memories-title {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .form-section {
+        padding: 40px 20px;
+    }
+
+    .form-title {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .form-options {
+        gap: 15px;
+    }
+
+    .btn-present {
+        width: 150px;
+        height: 150px;
+        font-size: 16px;
+    }
+
+    .present-section {
+        padding: 60px 20px;
+        min-height: 300px;
+    }
+
+    .modal-content {
+        padding: 30px 20px;
+        width: 85%;
+    }
+
+    .modal-title {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .modal-buttons {
+        gap: 15px;
+    }
+
+    .btn-modal {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-title {
+        font-size: 18px;
+    }
+
+    .cronometro-display {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .time-value {
+        font-size: 24px;
+        min-width: 50px;
+    }
+
+    .time-label {
+        font-size: 10px;
+    }
+
+    .time-separator {
+        font-size: 18px;
+        margin: 0 3px;
+    }
+
+    .memories-title {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .memory-subtitle {
+        font-size: 14px;
+    }
+
+    .memory-text {
+        font-size: 13px;
+    }
+
+    .form-title {
+        font-size: 18px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+
+    .form-option {
+        font-size: 13px;
+    }
+
+    .btn-present {
+        width: 130px;
+        height: 130px;
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
